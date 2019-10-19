@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;   /*  1 rem = 10px/16px = 62%  */
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(43, 43, 43);
+}
+
+a {
+  text-decoration: none;
+}
+
+.back_top {
+  text-decoration: none;
+  position: fixed;
+  bottom: 2rem;
+  height: 5rem;
+  padding: 0 5rem;
+  margin: 2rem 5rem;
+  background-image: url(images/up-arrow.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.back_top:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+header {
+  height: 17rem;
+  width: 100%;
+}
+
+.nav_menu {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background-color: #000;
+  height: 13rem;
+}
+
+.header_logo {
+  display: flex;
+  padding-left: 10%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  background-color: #edeeef;
+}
+
+
+#logo_border {
+  transition: 0.5s;
+  margin: 1.5rem 0;
+  background-color: black;
+  background-image: url("images/LOGO_NEW.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 15vh;
+  height: 15vh;
+}
+
+#logo_border:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+#logo_text {
+  text-transform: uppercase;
+  color: #000;
+  font-family: Oswald;
+  font-size: 2.9rem;
+  font-weight: 5rem;
+  text-align: center;
+  padding: 4rem 3vw;
+}
+
+nav {
+	margin-left: 25%;
+  margin-top: 5.5rem;
+}
+
+nav > a{
+  display: inline-block;
+  transition: 0.3s;
+  text-transform: uppercase;
+	color: #fff;
+	font-family: Oswald;
+  font-weight: 2rem;
+	text-align: left;
+	padding: 0 1rem;
+	font-size: 2rem;
+}
+
+nav > a:hover{
+  transition: 0.3s;
+  transform: scale(1.05);
+	border-bottom: 0.4rem solid #FFBF00;
+}
+
+#menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+  #logo_border {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #menu {
+    display: grid;
+    color: #fff;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 668px) {
+
+  #logo_border {
+    display: inline-block;
+  }
+
+  #logo_text {
+    display: none;
+  }
+}
+
+
+
+p {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;  
+}
+
+
+.services{
+  height: 10%;
+  position: relative;
+	font-size: 1vw;
+	font-family: Oswald;
+	color: #fff;
+	text-align: center;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+	grid-gap: 2em;
+  padding: 2.5rem 2rem;
+}
+
+.services div{
+  background-color: #85a2d3;
+  border-radius: 1.1rem;
+	height: 35rem;
+}
+
+.service{
+  position: relative;
+  z-index: 5;
+  transition: 0.5s;
+}
+
+.service .price{
+  display: block;
+  transition: 0.2s;
+  width: 100%;
+  max-height: 30%;
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-color: black;
+  border-radius: 0;
+  border-bottom-left-radius: 1.1rem;
+  border-bottom-right-radius: 1.1rem;
+}
+
+.service:hover {
+  transition: 0.1s;
+	color: #fff;
+  transform: scale(1.03);
+
+}
+
+.service:hover .price{
+  transition: 0.2s;
+  opacity: 0.9;
+  top: 70%;
+  background-color: black;
+
+}
+
+.price p{
+  font-family: Oswald;
+  font-size: 2rem;
+}
+
+
+.order {
+  background-color: #3dff50;
+  margin: 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: .6rem;
+  width: 10rem;
+  height: 4rem;
+  font-family: Oswald;
+  font-size: 2rem;
+}
+
+.order:hover {
+  cursor: pointer;  
+  background-color: #FFBF00;
+}
+
+#photo {
+  background-image: url(images/photo.jpg);
+	background-size: cover;
+}
+
+#video {
+  background-image: url(images/video.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#edit {
+  background-image: url(images/edit.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(40rem, 1fr) );
+}
+
+.portfolio .album{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(40rem, 1fr) );
+  grid-gap: 1rem;
+  padding-bottom: 56.25%;
+  padding: 5rem 2rem;
+}
+
+
+.album iframe {
+  transition-delay: 0s;
+  transition: all 0.4s ease-out;
+  width: 100%;
+  height: 30rem;
+  border-radius: 5px;
+}
+
+.album iframe:hover{
+  transition-delay: 0s;
+  transition: all 0.4s ease-out;
+}
+
+
+
+
+.image {
+  margin: 10px;
+  opacity: .99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.image:before {
+  content: '';
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.image img {
+  display: block;
+  width: 100%; /* ширина картинки */
+  height: auto; /* высота картинки */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.image .caption {
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  text-align: center;
+}
+.image .caption span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.image .caption .title {
+  line-height: 1;
+  font-weight: normal;
+  font-size: 3rem;
+}
+.image .caption .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+.image:focus:before,
+.image:focus span, .image:hover:before,
+.image:hover span {
+  opacity: 1;
+}
+.image:focus:before, .image:hover:before {
+  top: 50%;
+}
+.image:focus span, .image:hover span {
+  top: 0;
+}
+.image:focus .title, .image:hover .title {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+.image:focus .info, .image:hover .info {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+
+
+
+#contacts {
+  width: 100%;
+  background-color: black;
+  padding: 2rem 0;
+  color: white;
+}
+
+
+.contacts {
+  left: 50%;
+  margin-right: -50%;
+  text-align: center;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-gap: 2em; */
+  padding: 2.5rem 10rem;
+  margin: 0;
+  height: 15rem;
+  background-color: black;
+}
+
+.icon {
+  padding: 2rem 5rem;
+  width: 7rem;
+  height: 7rem;
+  cursor: pointer;
+  transition: 0.2s;
+  filter: brightness(0) invert(1);
+}
+
+.icon:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+/* Changing size for instagram icon because it's not like other */
+#instagram {
+  margin-bottom: 0.6rem;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+#instagram:hover {
+  filter: brightness(100%);
+  filter: saturate(130%);
+}
