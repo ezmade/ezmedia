@@ -12,78 +12,44 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-color: rgb(43, 43, 43);
+  background: black;
+  /* background-color: rgb(43, 43, 43); */
 }
 
 a {
   text-decoration: none;
 }
 
-.back_top {
-  text-decoration: none;
-  position: fixed;
-  bottom: 2rem;
-  height: 5rem;
-  padding: 0 5rem;
-  margin: 2rem 5rem;
-  background-image: url(images/up-arrow.png);
-  background-size: auto;
-  background-repeat: no-repeat;
-  transition: 0.3s;
-}
-
-.back_top:hover {
-  transition: 0.3s;
-  transform: scale(1.05);
-}
-
 header {
-  height: 17rem;
+  height: 0rem;
   width: 100%;
 }
 
 .nav_menu {
   display: grid;
   grid-template-columns: 40% 60%;
-  background-color: #000;
   height: 13rem;
+  width: 100%;
 }
 
 .header_logo {
   display: flex;
   padding-left: 10%;
   overflow: hidden;
-  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-  background-color: #edeeef;
-}
-
-
-#logo_border {
-  transition: 0.5s;
-  margin: 1.5rem 0;
-  background-color: black;
-  background-image: url("images/LOGO_NEW.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  width: 15vh;
-  height: 15vh;
-}
-
-#logo_border:hover {
-  transition: 0.3s;
-  transform: scale(1.1);
 }
 
 #logo_text {
   text-transform: uppercase;
-  color: #000;
+  color: whitesmoke;
   font-family: Oswald;
   font-size: 2.9rem;
   font-weight: 5rem;
-  text-align: center;
-  padding: 4rem 3vw;
+  text-align: left;
+  padding: 4rem;
+}
+
+#logo_text::after {
+  content: "Anton Easymade";
 }
 
 nav {
@@ -113,36 +79,6 @@ nav > a:hover{
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
-
-  #logo_border {
-    display: none;
-  }
-
-  nav {
-    display: none;
-  }
-
-  #menu {
-    display: grid;
-    color: #fff;
-    float: right;
-  }
-}
-
-@media screen and (max-width: 668px) {
-
-  #logo_border {
-    display: inline-block;
-  }
-
-  #logo_text {
-    display: none;
-  }
-}
-
-
-
 p {
   font-family: Oswald;
   text-transform: uppercase;
@@ -150,121 +86,125 @@ p {
   font-weight: bold;
   text-align: center;
   color: #fff;  
-}
-
-
-.services{
-  height: 10%;
-  position: relative;
-	font-size: 1vw;
-	font-family: Oswald;
-	color: #fff;
-	text-align: center;
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
-	grid-gap: 2em;
-  padding: 2.5rem 2rem;
-}
-
-.services div{
-  background-color: #85a2d3;
-  border-radius: 1.1rem;
-	height: 35rem;
-}
-
-.service{
-  position: relative;
-  z-index: 5;
-  transition: 0.5s;
-}
-
-.service .price{
-  display: block;
-  transition: 0.2s;
   width: 100%;
-  max-height: 30%;
+}
+
+.video_cover {
+  background-position-y: 0;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.video_cover video{
   position: absolute;
-  top: 30%;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  filter: opacity(30%);
+  z-index: -1;
   overflow: hidden;
-  opacity: 0;
-  background-color: black;
-  border-radius: 0;
-  border-bottom-left-radius: 1.1rem;
-  border-bottom-right-radius: 1.1rem;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-.service:hover {
-  transition: 0.1s;
-	color: #fff;
-  transform: scale(1.03);
-
-}
-
-.service:hover .price{
-  transition: 0.2s;
-  opacity: 0.9;
-  top: 70%;
-  background-color: black;
-
-}
-
-.price p{
+.video_cover a {
+  text-decoration: none;
+  text-transform: uppercase;
   font-family: Oswald;
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 1px #fff, 0px 0px 1px #fff;
+  transition: 0.1;
 }
 
-
-.order {
-  background-color: #3dff50;
-  margin: 1.5rem;
-  outline: none;
-  border: none;
-  border-radius: .6rem;
-  width: 10rem;
-  height: 4rem;
-  font-family: Oswald;
-  font-size: 2rem;
+.video_cover a:hover {
+  color:whitesmoke;
+  animation: none;
+  transition: 0.3s;
+  border-bottom: .4rem solid #FFBF00;
+  /* border-top: .4rem solid #FFBF00; */
 }
 
-.order:hover {
-  cursor: pointer;  
-  background-color: #FFBF00;
+@keyframes blur {
+  from {
+    text-shadow:
+      0px 0px 1px #fff,
+      0px 0px 1px #fff, 
+      0px 0px 2px #fff,
+      0px 0px 2px #fff,
+      0px 0px 2px #fff,
+      0px 0px 2px #fff,
+      0px 0px 2px #fff,
+      0px 0px 2px #fff,
+      0px 0px 5px #fff,
+      0px 0px 5px #fff,
+      0px 0px 5px rgb(213, 210, 240),
+      0px 0px 15px rgb(213, 210, 240),
+      0px 1px 10px rgb(213, 210, 240),
+      0px 1px 10px rgb(213, 210, 240),
+      0px 1px 10px rgb(213, 210, 240),
+      0px 1px 10px rgb(213, 210, 240),
+      0px -1px 10px rgb(213, 210, 240),
+      0px -1px 10px rgb(213, 210, 240);
+  }
 }
 
-#photo {
-  background-image: url(images/photo.jpg);
-	background-size: cover;
+#about, #portfolio, #contacts, #prices {
+  margin-top: 15rem;
 }
 
-#video {
-  background-image: url(images/video.jpg);
-	background-size: cover;
-	background-position: center;
-}
-
-#edit {
-  background-image: url(images/edit.jpg);
-	background-size: cover;
-	background-position: center;
-}
-
-#portfolio {
+.about {
+  margin-top: 5rem;
+  height: 20%;
+  position: relative;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(40rem, 1fr) );
+  grid-template-columns: 30% 60%;
+	grid-gap: 2em;
+}
+
+.about img{
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+}
+
+.wrapper {
+  font-family: Oswald;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-align: left;
+  color: white;
+  overflow: hidden;
+}
+
+.wave {
+  color: #999999;
+  animation: 0.5s color infinite;
+}
+
+@keyframes color {
+  50% {
+    color: #8fc8;
+  }
 }
 
 .portfolio .album{
   position: relative;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(40rem, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
   grid-gap: 1rem;
   padding-bottom: 56.25%;
-  padding: 5rem 2rem;
+  padding: 5rem 0;
 }
 
+.album {
+  width:100%;
+}
 
 .album iframe {
   transition-delay: 0s;
@@ -278,9 +218,6 @@ p {
   transition-delay: 0s;
   transition: all 0.4s ease-out;
 }
-
-
-
 
 .image {
   margin: 10px;
@@ -318,7 +255,7 @@ p {
 }
 .image .caption {
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -369,8 +306,81 @@ p {
 }
 
 
+.price {
+  display: grid;
+  padding: 0 5rem 5rem 5rem;
+}
 
 
+.table_price {
+  border-collapse: collapse;
+  border-left: 3px solid rgba(27, 27, 27, 0);
+  border-right: 3px solid rgba(27, 27, 27, 0);
+  border-bottom: 3px solid rgba(27, 27, 27, 0);
+  font-family: Oswald;
+}
+
+.table_price caption {
+  background: rgba(27, 27, 27, 0);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px 0 rgba(27, 27, 27, 0);
+  color: white;
+  font-family: Oswald;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.table_price td, .table_price th {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.table_price th {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.table_price tr:nth-child(1n) {
+  background: black;
+  color: white; 
+}
+
+.table_price tr:nth-child(2n) {
+  background: white;
+  color: black; 
+}
+
+.table_price td:last-of-type {
+  text-align: center;
+  color: white;
+}
+
+.table_price a {
+  display: inline-block;
+  padding: 5px 10px;
+  background: rgb(27, 27, 27);
+  box-shadow: 3px 3px 0 0 #FFBF00;
+  border-radius: 5px;
+  position: relative;
+}
+
+.table_price a:hover {
+  box-shadow: none;
+  top: 1px;
+  left: 1px;  
+  cursor: pointer;
+}
+
+
+
+
+/* TODO: FIX THE GRID */
 #contacts {
   width: 100%;
   background-color: black;
@@ -378,16 +388,15 @@ p {
   color: white;
 }
 
-
+/* TODO: FIX THE GRID */
 .contacts {
-  left: 50%;
-  margin-right: -50%;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-	grid-gap: 2em; */
-  padding: 2.5rem 10rem;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, fr));
+	grid-gap: 1em;
+  padding: 2.5rem 5rem;
   height: 15rem;
   background-color: black;
 }
@@ -417,4 +426,61 @@ p {
 #instagram:hover {
   filter: brightness(100%);
   filter: saturate(130%);
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  * {
+    animation: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .video_cover {
+    display: none;
+  }
+
+  .about {
+    display: block;
+  }
+
+  .about img {
+    display: none;
+  }
+
+  .wrapper {
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  .about_text {
+    animation: none;
+  }
+
+  #menu {
+    display: grid;
+    color: #fff;
+    float: right;
+  }
+
+  #logo_text {
+    padding: 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 668px) {
+
+  html {
+    width: 100%;
+  }
+
+  #logo_text {
+    padding: 4rem 1rem;
+  }
+  #logo_text::after {
+    content: "ezmade";
+  }
 }

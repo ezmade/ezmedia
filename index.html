@@ -2,26 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrik-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="images/LOGO_round.ico" type="image/ico">
+    <link rel="icon" href="assets/images/LOGO_round.ico" type="image/ico">
     <link rel="stylesheet" href="assets/style.css">
     <title>Anton Easymade</title>
   </head>
 
   <body id="main">
     <header>
-
       <div class="nav_menu" id="nav_menu">
         <div class='header_logo'>
-          <a id="logo_border"><!--<img id="logo" src="images/LOGO.png" alt="Easymade Blog">--></a>
-          <p id="logo_text">Anton Easymade</p>
+          <p id="logo_text"></p>
         </div>
 
         <nav>
           <a href="#main">Главная</a>
-          <a href="#services">Услуги</a>
+          <a href="#about">Обо мне</a>
           <a href="#portfolio">Портфолио</a>
+          <a href="#prices">Цены</a>
           <a href="#contacts">Контакты</a>
           <a href="#" id="menu" class="icon">&#9776</a>
         </nav>
@@ -29,38 +28,37 @@
     </header>
 
     <main>
-        <p id="services">Услуги</p>
-        <div class="services">
-    			<div class="service" id="photo">
-    				<div class="price" id="photo_order">
-              <p>Фотосъёмка от 500р</p>
-              <button type="button" class="order" id="order">Заказать</button>
-            </div>
-    			</div>
-    			<div class="service" id="video">
-    				<div class="price" id="video_price">
-              <p>Видеосъёмка от 1000р</p>
-              <button type="button" class="order" id="order">Заказать</button>
-            </div>
-    			</div>
-          <div class="service" id="edit">
-            <div class="price" id="edit_price">
-              <p>Монтаж от 500р</p>
-              <button type="button" class="order" id="order">Заказать</button>
+
+      <div class="video_cover">
+        <video autoplay loop>
+          <source src="assets/images/video_cover_converted.mp4" type="video/mp4">
+        </video>
+
+        <a class="area" href="#prices">заказать</a>
+      </div>
+      <!-- TODO: Change this part! -->
+        <p id="about">Обо мне</p>
+        <div class="about">
+          <img src="assets/images/profile_photo.jpg">
+          <div class="wrapper">
+            <p class="about_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.jgf 
+              afhsa jfd hsh as hekl owwjdsak k fasldsk ajfaj fjsjaj fjasjjf jdajsjdjfhug hb knskan 
+              kbgajlsnv fuhfaksb  Reprehenderit sit nesciunt laudantium ad enim libero cupiditate, 
+              praesentium, iusto, soluta optio eius repellendus sequi nihil ipsam unde? Provident 
+              deleniti vero ad.</p>
+          </div>
+        </div>
+
+      <p id="portfolio">Портфолио</p>
+      <div class="portfolio">
+        <div class="album" id="photo_album">
+          <div class="image">
+            <img src="assets/images/1_c.jpg" alt="" height="360" width="640">
+            <div class="caption">
+                <span class="title">Title</span>
+                <span class="info">HEHEHE</span>
             </div>
           </div>
-    		</div>
-
-        <p id="portfolio">Портфолио</p>
-        <div class="portfolio">
-          <div class="album" id="photo_album">
-            <div class="image">
-                <img src="assets/images/1_c.jpg" alt="" height="360" width="640">
-                <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">HEHEHE</span>
-                </div>
-            </div>
             <div class="image">
                 <img src="assets/images/2_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
@@ -114,11 +112,37 @@
           </div>
         </div>
 
+        <p id="prices">Цены</p>
+        <div class="price">
+          <table class="table_price">
+            <tr>
+              <th>Услуга</th>
+              <th colspan="2">Стоимость</th>
+            </tr>
+            <tr>
+              <td>Фотосъёмка</td>
+              <td>от 500р</td>
+              <td><a>Заказать</a></td>
+            </tr>
+            <tr>
+              <td>Видеосъёмка</td>
+              <td>от 1000р</td>
+              <td><a>Заказать</a></td>
+            </tr>
+            <tr>
+              <td>Монтаж</td>
+              <td>от 500р</td>
+              <td><a>Заказать</a></td>
+            </tr>
+          </table>
+        </div>
+        
         <p id="contacts">Контакты</p>
         <div class="contacts">
           <a target="_blank" href="https://instagram.com/ezmade"><img class="icon" id="instagram" src="assets/images/instagram.png" alt=""></a>
           <a target="_blank" href="https://vk.com/easymadee"><img class="icon" src="assets/images/vk.png" alt=""></a>
           <a target="_blank" href="https://youtube.com/easymadevideo"><img class="icon" src="assets/images/youtube.png" alt=""></a>
+        </div>
     </main>
 
     <script src="assets/script.js"></script>
