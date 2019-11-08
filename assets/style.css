@@ -5,19 +5,21 @@
 }
 
 html {
-  font-size: 62.5%;   /*  1 rem = 10px/16px = 62%  */
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
   height: 100%;
   width: 100%;
-  background: black;
-  /* background-color: rgb(43, 43, 43); */
+  background: #000;
 }
 
 a {
   text-decoration: none;
+  outline: none;
+  user-select: none;
+  color: white;
 }
 
 header {
@@ -27,9 +29,10 @@ header {
 
 .nav_menu {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 65% 5%;
   height: 13rem;
   width: 100%;
+  background: transparent;
 }
 
 .header_logo {
@@ -40,7 +43,7 @@ header {
 
 #logo_text {
   text-transform: uppercase;
-  color: whitesmoke;
+  color: #fff;
   font-family: Oswald;
   font-size: 2.9rem;
   font-weight: 5rem;
@@ -55,9 +58,14 @@ header {
 nav {
 	margin-left: 25%;
   margin-top: 5.5rem;
+  outline: none;
 }
 
-nav > a{
+.nav_bar {
+  float: right;
+}
+
+.nav_bar a{
   display: inline-block;
   transition: 0.3s;
   text-transform: uppercase;
@@ -69,14 +77,24 @@ nav > a{
 	font-size: 2rem;
 }
 
-nav > a:hover{
+.nav_bar a:hover{
   transition: 0.3s;
   transform: scale(1.05);
 	border-bottom: 0.4rem solid #FFBF00;
 }
 
-#menu {
+#menu, #close_menu {
   display: none;
+  outline: none;
+}
+
+.sidebar {
+  display: none;
+  z-index: 200;
+  height: 100vh;
+  width: 20%;
+  font-family: Oswald;
+  font-size: 3rem;
 }
 
 p {
@@ -89,14 +107,14 @@ p {
   width: 100%;
 }
 
-.video_cover {
+.cover {
   background-position-y: 0;
   height: 100vh;
   display: flex;
   align-items: flex-end;
 }
 
-.video_cover video{
+.cover video{
   position: absolute;
   filter: opacity(30%);
   z-index: -1;
@@ -105,13 +123,23 @@ p {
   min-width: 100%;
 }
 
-.video_cover a {
+.cover img{
+  position: absolute;
+  filter: opacity(50%);
+  z-index: -1;
+  overflow: hidden;
+  max-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+}
+
+.cover a {
   text-decoration: none;
   text-transform: uppercase;
   font-family: Oswald;
   font-size: 4rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -121,12 +149,11 @@ p {
   transition: 0.1;
 }
 
-.video_cover a:hover {
-  color:whitesmoke;
+.cover a:hover {
+  color:#fff;
   animation: none;
   transition: 0.3s;
   border-bottom: .4rem solid #FFBF00;
-  /* border-top: .4rem solid #FFBF00; */
 }
 
 @keyframes blur {
@@ -160,13 +187,13 @@ p {
 .about {
   margin-top: 5rem;
   height: 20%;
+  width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: 30% 60%;
-	grid-gap: 2em;
+  grid-template-columns: 40% 50%;
 }
 
-.about img{
+.about_img{
   margin: 0 auto;
   border-radius: 50%;
   height: 20rem;
@@ -182,24 +209,13 @@ p {
   overflow: hidden;
 }
 
-.wave {
-  color: #999999;
-  animation: 0.5s color infinite;
-}
-
-@keyframes color {
-  50% {
-    color: #8fc8;
-  }
-}
-
 .portfolio .album{
   position: relative;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
   grid-gap: 1rem;
   padding-bottom: 56.25%;
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .album {
@@ -207,16 +223,9 @@ p {
 }
 
 .album iframe {
-  transition-delay: 0s;
-  transition: all 0.4s ease-out;
-  width: 100%;
-  height: 30rem;
+  width: 95%;
+  height: 25rem;
   border-radius: 5px;
-}
-
-.album iframe:hover{
-  transition-delay: 0s;
-  transition: all 0.4s ease-out;
 }
 
 .image {
@@ -226,9 +235,9 @@ p {
   position: relative;
   border-radius: 3px;
   cursor: pointer;
-  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.30);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.30);
 }
 .image:before {
   content: '';
@@ -248,8 +257,8 @@ p {
 }
 .image img {
   display: block;
-  width: 100%; /* ширина картинки */
-  height: auto; /* высота картинки */
+  width: 100%;
+  height: auto; 
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -283,7 +292,7 @@ p {
 .image .caption .info {
   line-height: 1.2;
   margin-top: 5px;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 .image:focus:before,
 .image:focus span, .image:hover:before,
@@ -326,7 +335,7 @@ p {
   border-top-right-radius: 5px;
   padding: 1rem;
   box-shadow: 0 2px 4px 0 rgba(27, 27, 27, 0);
-  color: white;
+  color: #fff;
   font-family: Oswald;
   font-size: 3rem;
   font-weight: bold;
@@ -347,13 +356,13 @@ p {
 }
 
 .table_price tr:nth-child(1n) {
-  background: black;
-  color: white; 
+  background: #000;
+  color: #fff; 
 }
 
 .table_price tr:nth-child(2n) {
-  background: white;
-  color: black; 
+  background: #fff;
+  color: #000; 
 }
 
 .table_price td:last-of-type {
@@ -380,25 +389,24 @@ p {
 
 
 
-/* TODO: FIX THE GRID */
+/* TODO: FIX THIS SECTION */
 #contacts {
   width: 100%;
-  background-color: black;
+  background-color: #000;
   padding: 2rem 0;
-  color: white;
+  color: #fff;
 }
 
-/* TODO: FIX THE GRID */
 .contacts {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, fr));
-	grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-gap: 1rem;
   padding: 2.5rem 5rem;
   height: 15rem;
-  background-color: black;
+  background-color: #000;
 }
 
 .icon {
@@ -412,22 +420,16 @@ p {
 
 .icon:hover {
   transition: 0.3s;
-  transform: scale(1.1);
+  transform: scale(1.08);
   filter: brightness(100%);
 }
 
-/* Changing size for instagram icon because it's not like other */
+/* Changing size for instagram icon because it's not like others */
 #instagram {
   margin-bottom: 0.6rem;
   width: 5.5rem;
   height: 5.5rem;
 }
-
-#instagram:hover {
-  filter: brightness(100%);
-  filter: saturate(130%);
-}
-
 
 @media screen and (max-width: 1024px) {
 
@@ -435,39 +437,52 @@ p {
     animation: none;
   }
 
-  nav {
+  .nav_bar {
     display: none;
   }
 
-  .video_cover {
+  #menu {
+    display: grid;
+    text-decoration: none;
+    float: right;
+    font-size: 3rem;
+  }
+
+  .sidebar {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  
+  .cover {
     display: none;
   }
 
   .about {
-    display: block;
+    display: grid;
+    grid-template-columns: none;
   }
 
-  .about img {
-    display: none;
+  .about_img {
+    margin: auto;
+    padding: auto;
   }
 
   .wrapper {
     text-align: center;
-    margin-left: 2rem;
+    margin: auto;
   }
 
   .about_text {
     animation: none;
   }
 
-  #menu {
-    display: grid;
-    color: white;
-    float: right;
-  }
-
   #logo_text {
     padding: 4rem 2rem;
+  }
+
+  .icon:hover {
+    filter: brightness(0) invert(1);
+    transform: scale(1);
   }
 }
 
@@ -482,5 +497,9 @@ p {
   }
   #logo_text::after {
     content: "ezmade";
+  }
+
+  .contacts {
+    grid-template-columns: none;
   }
 }

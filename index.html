@@ -17,35 +17,39 @@
         </div>
 
         <nav>
-          <a href="#main">Главная</a>
-          <a href="#about">Обо мне</a>
-          <a href="#portfolio">Портфолио</a>
-          <a href="#prices">Цены</a>
-          <a href="#contacts">Контакты</a>
-          <a href="#" id="menu" class="icon">&#9776</a>
+          <div class="nav_bar">
+            <a class="link" href="#about">Обо мне</a>
+            <a class="link" href="#portfolio">Портфолио</a>
+            <a class="link" href="#prices">Цены</a>
+            <a class="link" href="#contacts">Контакты</a>
+          </div>
         </nav>
+        <a id="menu" class="icons" onclick="sidebar_open()">&#9776</a>
+        <div id="sidebar" class="sidebar">
+            <a id="close_menu" class="icons" onclick="sidebar_close()">&#9776</a>
+            <a class="link" href="#about">Обо мне</a>
+            <a class="link" href="#portfolio">Портфолио</a>
+            <a class="link" href="#prices">Цены</a>
+            <a class="link" href="#contacts">Контакты</a>
+        </div>
       </div>
     </header>
 
     <main>
 
-      <div class="video_cover">
-        <video autoplay loop>
+      <div class="cover">
+        <!-- <video autoplay loop>
           <source src="assets/images/video_cover_converted.mp4" type="video/mp4">
-        </video>
-
+        </video> -->
+        <img src="assets/images/cover.jpg" alt="">
         <a class="area" href="#prices">заказать</a>
       </div>
       <!-- TODO: Change this part! -->
         <p id="about">Обо мне</p>
         <div class="about">
-          <img src="assets/images/profile_photo.jpg">
+          <img class="about_img" src="assets/images/profile_photo.jpg">
           <div class="wrapper">
-            <p class="about_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.jgf 
-              afhsa jfd hsh as hekl owwjdsak k fasldsk ajfaj fjsjaj fjasjjf jdajsjdjfhug hb knskan 
-              kbgajlsnv fuhfaksb  Reprehenderit sit nesciunt laudantium ad enim libero cupiditate, 
-              praesentium, iusto, soluta optio eius repellendus sequi nihil ipsam unde? Provident 
-              deleniti vero ad.</p>
+            <p class="about_text">Я - Бойко Антон. Фотограф, видеооператор и монтажер. Снимаю танцевальные и музыкальные видео, короткометражные фильмы, фотографирую в разных жанрах. Я всегда в поисках новых лиц в кадре и интересных идей, поэтому готов к сотрудничеству! Здесь представлено моё небольшое портфолио.</p>
           </div>
         </div>
 
@@ -55,60 +59,67 @@
           <div class="image">
             <img src="assets/images/1_c.jpg" alt="" height="360" width="640">
             <div class="caption">
-                <span class="title">Title</span>
-                <span class="info">HEHEHE</span>
+                <span class="title">Summer</span>
+                <span class="info">August 2017</span>
             </div>
           </div>
             <div class="image">
                 <img src="assets/images/2_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">HEHEHE</span>
+                    <span class="title">Kara Atabaski</span>
+                    <span class="info">October 2019</span>
                 </div>
             </div>
             <div class="image">
                 <img src="assets/images/3_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">HEHEHE</span>
+                    <span class="title">Victoria Danilchenko</span>
+                    <span class="info">August 2018</span>
                 </div>
             </div>
             <div class="image">
                 <img src="assets/images/4_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">HEHEHE</span>
+                    <span class="title">Irina Radionova</span>
+                    <span class="info">August 2018</span>
                 </div>
             </div>
             <div class="image">
                 <img src="assets/images/5_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">HEHEHE</span>
+                    <span class="title">Irina Radionova</span>
+                    <span class="info">September 2016</span>
                 </div>
             </div>
             <div class="image">
                 <img src="assets/images/6_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">HEHEHE</span>
+                    <span class="title">Irina Radionova</span>
+                    <span class="info">September 2016</span>
                 </div>
             </div>
             <div class="image">
                 <img src="assets/images/7_c.jpg" alt="" height="360" width="640">
                 <div class="caption">
-                    <span class="title">Title</span>
-                    <span class="info">Caption</span>
+                    <span class="title">Nastya Antonova</span>
+                    <span class="info">October 2019</span>
                 </div>
             </div>
+            <div class="image">
+              <img src="assets/images/8_c.jpg" alt="" height="360" width="640">
+              <div class="caption">
+                  <span class="title">Kara Atabaski</span>
+                  <span class="info">October 2019</span>
+              </div>
+          </div>
           </div>
 
           <div class="album" id="video_album">
-            <iframe src="https://www.youtube.com/embed/xmvodVja_DU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/G1iVUoJdb-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/3k0GONtZBr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/vXu1ivpFtYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/RbKQMOaItbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xmvodVja_DU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/G1iVUoJdb-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/3k0GONtZBr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/vXu1ivpFtYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/RbKQMOaItbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
           </div>
         </div>
 
@@ -138,11 +149,13 @@
         </div>
         
         <p id="contacts">Контакты</p>
-        <div class="contacts">
-          <a target="_blank" href="https://instagram.com/ezmade"><img class="icon" id="instagram" src="assets/images/instagram.png" alt=""></a>
-          <a target="_blank" href="https://vk.com/easymadee"><img class="icon" src="assets/images/vk.png" alt=""></a>
-          <a target="_blank" href="https://youtube.com/easymadevideo"><img class="icon" src="assets/images/youtube.png" alt=""></a>
-        </div>
+        <footer>
+          <div class="contacts">
+            <a target="_blank" href="https://instagram.com/ezmade"><img class="icon" id="instagram" src="assets/images/instagram.png" alt=""></a>
+            <a target="_blank" href="https://vk.com/easymadee"><img class="icon" src="assets/images/vk.png" alt=""></a>
+            <a target="_blank" href="https://youtube.com/easymadevideo"><img class="icon" src="assets/images/youtube.png" alt=""></a>
+          </div>
+        </footer> 
     </main>
 
     <script src="assets/script.js"></script>
