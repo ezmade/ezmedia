@@ -20,21 +20,15 @@
 // }
 
 var sidebar = document.getElementById("sidebar");
-var burger_open = document.getElementById("menu");
-var burger_close = document.getElementById("close_menu");
+var burger = document.getElementById("menu");
 
 function sidebar_open() {
   sidebar.style.display = "grid";
-  burger_open.style.display = "none";
-  burger_close.style.display = "grid";
-  burger_close.style.position = "fixed";
-  burger_close.style.top = "0";
-  burger_close.style.right = "0";
+  burger.setAttribute("onclick", "sidebar_close()");
 }
 
 function sidebar_close() {
   sidebar.style.display = "none";
-  burger_close.style.display = "none";
-  burger_open.style.display = "grid";
+  burger.setAttribute("onclick", "sidebar_open()");
 }
 

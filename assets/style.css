@@ -29,7 +29,7 @@ header {
 
 .nav_menu {
   display: grid;
-  grid-template-columns: 30% 65% 5%;
+  grid-template-columns: 30% 60% 5%;
   height: 13rem;
   width: 100%;
   background: transparent;
@@ -83,7 +83,7 @@ nav {
 	border-bottom: 0.4rem solid #FFBF00;
 }
 
-#menu, #close_menu {
+#menu {
   display: none;
   outline: none;
 }
@@ -193,7 +193,7 @@ p {
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 40% 60%;
 }
 
 .about_img{
@@ -231,18 +231,15 @@ p {
   grid-template-columns: repeat( auto-fit, minmax(50rem, 1fr) );
   grid-gap: 1rem;
   padding-bottom: 56.25%;
-  padding: 2rem 0;
-}
-
-.album {
-  width:100%;
+  padding: 2rem 0rem;
+  width: 100%;
 }
 
 .album iframe {
   width: 95%;
   height: 25rem;
   border-radius: 5px;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 
 .image {
@@ -334,7 +331,7 @@ p {
 
 .price {
   display: grid;
-  padding: 0 5rem 5rem 5rem;
+  padding: 0 2rem 5rem 2rem;
 }
 
 
@@ -461,25 +458,21 @@ p {
     display: none;
   }
 
-  #menu, #close_menu {
-    display: grid;
+  .nav_menu #menu {
+    display: block;
     text-decoration: none;
     font-size: 3rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
   }
+
 
   .sidebar {
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     position: absolute;
     padding: 10rem 2rem;
     width: 40%;
     background: rgba(0, 0, 0, 0.95);
-  }
-
-  #close_menu {
-    display: none;
+    left: 0;
   }
   
   .cover {
@@ -489,7 +482,6 @@ p {
   .about {
     display: grid;
     grid-template-columns: none;
-    margin-left: 1rem;
   }
 
   .about_img {
@@ -497,7 +489,7 @@ p {
     padding: auto;
   }
 
-  .wrapper {
+  .wrapper p{
     text-align: center;
     margin: auto;
   }
@@ -511,7 +503,7 @@ p {
   }
 
   .portfolio .album {
-    grid-template-columns: repeat( auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr));
   }
 
   .icon:hover {
