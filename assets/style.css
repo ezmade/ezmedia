@@ -91,10 +91,13 @@ nav {
 .sidebar {
   display: none;
   z-index: 200;
-  height: 100vh;
-  width: 20%;
+  height: 100%;
   font-family: Oswald;
   font-size: 3rem;
+}
+
+.sidebar a {
+  padding: 0rem 0;
 }
 
 p {
@@ -144,9 +147,9 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5rem;
-  animation: blur .75s ease-out infinite;
+  animation: blur 2s infinite;
   text-shadow: 0px 0px 1px #fff, 0px 0px 1px #fff;
-  transition: 0.1;
+  transition: 0.2s;
 }
 
 .cover a:hover {
@@ -198,21 +201,34 @@ p {
   border-radius: 50%;
   height: 20rem;
   width: 20rem;
+  box-shadow: -30px 0px 0 0 url("images/LOGO_NEW.jpg");
 }
 
-.wrapper {
+.wrapper p{
+  animation: anim 5s;
+  animation-duration: 5s;
   font-family: Oswald;
   font-size: 2.5rem;
   font-weight: normal;
+  text-transform: none;
   text-align: left;
   color: white;
   overflow: hidden;
 }
 
+@keyframes anim {
+  from {
+    filter: opacity(0%);
+  }
+  to {
+    filter: opacity(100%);
+  }
+}
+
 .portfolio .album{
   position: relative;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(50rem, 1fr) );
   grid-gap: 1rem;
   padding-bottom: 56.25%;
   padding: 2rem 0;
@@ -226,6 +242,7 @@ p {
   width: 95%;
   height: 25rem;
   border-radius: 5px;
+  margin-left: 1.5rem;
 }
 
 .image {
@@ -374,16 +391,19 @@ p {
   display: inline-block;
   padding: 5px 10px;
   background: rgb(27, 27, 27);
-  box-shadow: 3px 3px 0 0 #FFBF00;
+  box-shadow: 2.5px 2.5px 0 0 #FFBF00;
   border-radius: 5px;
   position: relative;
+  transition: 0.3s;
 }
 
 .table_price a:hover {
+  transition: 0.3s;
   box-shadow: none;
   top: 1px;
   left: 1px;  
   cursor: pointer;
+ 
 }
 
 
@@ -441,16 +461,25 @@ p {
     display: none;
   }
 
-  #menu {
+  #menu, #close_menu {
     display: grid;
     text-decoration: none;
-    float: right;
     font-size: 3rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
   }
 
   .sidebar {
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    position: absolute;
+    padding: 10rem 2rem;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  #close_menu {
+    display: none;
   }
   
   .cover {
@@ -460,6 +489,7 @@ p {
   .about {
     display: grid;
     grid-template-columns: none;
+    margin-left: 1rem;
   }
 
   .about_img {
@@ -478,6 +508,10 @@ p {
 
   #logo_text {
     padding: 4rem 2rem;
+  }
+
+  .portfolio .album {
+    grid-template-columns: repeat( auto-fit, minmax(40rem, 1fr));
   }
 
   .icon:hover {

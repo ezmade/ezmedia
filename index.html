@@ -25,12 +25,12 @@
           </div>
         </nav>
         <a id="menu" class="icons" onclick="sidebar_open()">&#9776</a>
+        <a id="close_menu" class="icons" onclick="sidebar_close()">&#9776</a>
         <div id="sidebar" class="sidebar">
-            <a id="close_menu" class="icons" onclick="sidebar_close()">&#9776</a>
-            <a class="link" href="#about">Обо мне</a>
-            <a class="link" href="#portfolio">Портфолио</a>
-            <a class="link" href="#prices">Цены</a>
-            <a class="link" href="#contacts">Контакты</a>
+            <a class="link" href="#about" onclick="sidebar_close()">Обо мне</a>
+            <a class="link" href="#portfolio" onclick="sidebar_close()">Портфолио</a>
+            <a class="link" href="#prices" onclick="sidebar_close()">Цены</a>
+            <a class="link" href="#contacts" onclick="sidebar_close()">Контакты</a>
         </div>
       </div>
     </header>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="assets/images/7_c.jpg" alt="" height="360" width="640">
+                <img src="assets/images/7_c.jpg" alt="" height="360px" width="640px">
                 <div class="caption">
                     <span class="title">Nastya Antonova</span>
                     <span class="info">October 2019</span>
