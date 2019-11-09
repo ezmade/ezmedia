@@ -32,7 +32,7 @@ header {
   grid-template-columns: 30% 60% 5%;
   height: 13rem;
   width: 100%;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 
 .header_logo {
@@ -86,6 +86,9 @@ nav {
 #menu {
   display: none;
   outline: none;
+  position: fixed;
+  right: 2rem;
+  z-index: 1000;
 }
 
 .sidebar {
@@ -454,6 +457,12 @@ p {
     animation: none;
   }
 
+  .nav_menu {
+    position: fixed;
+    background: #000;
+    z-index: 500;
+  }
+
   .nav_bar {
     display: none;
   }
@@ -468,7 +477,7 @@ p {
 
   .sidebar {
     display: none;
-    position: absolute;
+    position: fixed;
     padding: 10rem 2rem;
     width: 40%;
     background: rgba(0, 0, 0, 0.95);

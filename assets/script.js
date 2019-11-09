@@ -25,10 +25,12 @@ var burger = document.getElementById("menu");
 function sidebar_open() {
   sidebar.style.display = "grid";
   burger.setAttribute("onclick", "sidebar_close()");
+  burger.innerHTML = "&#10006";
 }
 
 function sidebar_close() {
   sidebar.style.display = "none";
   burger.setAttribute("onclick", "sidebar_open()");
+  burger.innerHTML = "&#9776";
 }
 
